@@ -21,7 +21,8 @@ const editorModel = {
         console.log("result", result);
     },
     editEdits: async function editEdits(updateName) {
-        console.log("updatename: ", updateName);
+        // console.log("updatename: ", updateName);
+        // console.log("updatenameID", updateName._id);
         const response = await fetch(`${editorModel.baseUrl}/editor`, {
             body: JSON.stringify(updateName),
             headers: {
@@ -30,22 +31,23 @@ const editorModel = {
             method: 'PUT'
         });
         const result = await response.json();
+        console.log("editEdits Frontend Result", result);
 
-        console.log("resulaasdt", result);
     },
-    deleteEdit: async function deleteEdit(deleteId) {
-        console.log("deletedId: ", deleteId);
-        const response = await fetch(`${editorModel.baseUrl}/editor`, {
-            body: JSON.stringify(deleteId),
-            headers: {
-              'content-type': 'application/json'
-            },
-            method: 'DELETE'
-        });
-        const result = await response.json();
+    // deleteEdit: async function deleteEdit(deleteId) {
+    //     console.log("deletedId: ", deleteId);
+    //     const response = await fetch(`${editorModel.baseUrl}/editor`, {
+    //         body: JSON.stringify(deleteId),
+    //         headers: {
+    //           'content-type': 'application/json'
+    //         },
+    //         method: 'DELETE'
+    //     });
+    //     const result = await response.json();
 
-        console.log("Result from delete", result);
-    },};
+    //     console.log("Result from delete", result);
+    // }
+};
 
 
 export default editorModel;

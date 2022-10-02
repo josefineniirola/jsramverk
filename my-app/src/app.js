@@ -20,7 +20,7 @@ function App() {
       const allEdits = await editorModel.getAllEdits();
   
       setNewEdit(allEdits);
-      console.log(allEdits);
+      console.log("App.js Alledits: ", allEdits);
     }
   
     useEffect(() => {

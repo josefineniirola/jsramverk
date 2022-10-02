@@ -34,10 +34,10 @@ function Editor({submitFunction}) {
     return (
         <form>
             <div className="toolbar">
-                <button class="button submitButton" onClick={saveEdit}>Spara</button>
+                <button className="button submitButton" onClick={saveEdit}>Publicera</button>
             </div>
             <div className="editor">
-                <label for="text">Namn: </label>
+                <label htmlFor="text">Namn: </label>
                 <input type="text" onChange={changeNameHandler} name="name"></input>
                 <TrixEditor input onChange={changeHandler} />
             </div>
